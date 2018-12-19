@@ -1,24 +1,36 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
     var user = sequelize.define('users', {
-        email: {
+        id: {
             type: DataTypes.STRING,
-            validate: {
-                isEmail: true
-              }
+            primaryKey: true,
         },
-        password: {
-            type: DataTypes.STRING
-        },
-        phone: {
-            type: DataTypes.STRING
-        },
-      
-        userName: {
-          type: DataTypes.STRING,
+        name: {
+            type: DataTypes.STRING,
+            allowNull: true,
         },
         avatar: {
             type: DataTypes.STRING,
+            allowNull: true,
+        },
+        sequence: {
+            type: DataTypes.BIGINT,
+            allowNull: false,
+            defaultValue: 0,
+        },
+        bandwidth: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            defaultValue: 0,
+        },
+        // Last transaction date for bandwidth calculate
+        bandwidthTime: {
+            type: DataTypes.DATE,
+        },
+        balance: {
+            type: DataTypes.BIGINT,
+            allowNull: false,
+            defaultValue: 0,
         }
 
     }, {

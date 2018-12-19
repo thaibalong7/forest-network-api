@@ -11,6 +11,8 @@ var db = {};
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
-db.user = require('../model/user.js')(sequelize, Sequelize);
+db.users = require('../model/user.js')(sequelize, Sequelize);
+db.payments = require('../model/payments.js')(sequelize, Sequelize);
+db.posts = require('../model/posts.js')(sequelize, Sequelize);
 
 module.exports = db;

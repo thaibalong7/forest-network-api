@@ -18,12 +18,18 @@
   },
   "homepage": "https://github.com/thaibalong7/server_forest_network#readme",
   "dependencies": {
+    "axios": "^0.18.0",
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
+    "decimal.js": "^10.0.1",
+    "moment": "^2.22.2",
     "mysql2": "^1.6.4",
     "pg": "^7.7.1",
     "pg-hstore": "^2.3.2",
-    "sequelize": "^4.41.2"
+    "sequelize": "^4.41.2",
+    "tendermint": "^3.4.0",
+    "ws": "^6.1.2",
+    "stellar-base": "^0.9.0"
   },
   "devDependencies": {
     "nodemon": "^1.18.8"

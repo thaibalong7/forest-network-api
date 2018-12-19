@@ -19,6 +19,14 @@ var setting = {
         },
         logging: false,
     },
+    tblong_account: {
+        email: 'thaibalong7@gmail.com',
+        secret_key: 'SA7WQQFVYUGHKKCOVQSRCDAPB27CHVCTXUXDM62ZFCY5KUSY26A4NGB6',
+        public_key: 'GCDSE5FJMNUSS7UICOVCWNLVX5IGZBPRWW6O2MPX7ARRKXUO4CYVFZTL',
+        secret_key_base64: 'P2hAtcUMdShOrCURDA8OviPUU70uNntZKLHVUljXgcaHInSpY2kpfogTqis1db9QbIXxtbztMff4IxVejuCxUg==',
+        public_key_base64: 'hyJ0qWNpKX6IE6orNXW/UGyF8bW87TH3+CMVXo7gsVI=',
+        tenermint_address: 'E2CCD6367AD3FDAEF8F23A2DBBAA1F008BD6A27D'
+    }
 };
 
 module.exports = setting;
