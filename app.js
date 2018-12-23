@@ -11,10 +11,9 @@ app.use(function (req, res, next) {
     res.header('Access-Control-Allow-Methods', 'PUT, POST, GET, DELETE, OPTIONS');
     next();
 });
-
-require('./app/router/users')(app);
-require('./app/router/payments')(app);
-require('./app/router/posts')(app);
+app.use(express.static(__dirname + '/public')); //Serves resources from public folder
+app.use('/', require('./app/router/users'));
+app.use('/', require('./app/router/payments'));
 
 var server_port = process.env.YOUR_PORT || process.env.PORT || 9000;
 var server_host = process.env.YOUR_HOST || '0.0.0.0';

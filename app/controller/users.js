@@ -1,6 +1,6 @@
 const db = require('../config/db.config.js');
 
-exports.login = (req, res) => {
+exports.login = async (req, res) => {
     if (typeof req.body.public_key === 'undefined') {
         return res.status(400).json({ msg: 'Params Invalid' })
     }

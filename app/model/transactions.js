@@ -1,12 +1,20 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-    var posts = sequelize.define('posts', {
-        creator: {
+    var transactions = sequelize.define('transactions', {
+        id: {
+            type: DataTypes.STRING,
+            primaryKey: true,
+        },
+        account: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        content: {
+        operation: {
             type: DataTypes.STRING,
+            allowNull: false,
+        },
+        params: {
+            type: DataTypes.BLOB,
             allowNull: true,
         },
         createAt: {
@@ -15,8 +23,8 @@ module.exports = (sequelize, DataTypes) => {
     }, {
             charset: 'utf8',
             collate: 'utf8_unicode_ci',
-            tableName: 'posts',
+            tableName: 'transactions',
             timestamps: false
         });
-    return posts;
+    return transactions;
 };

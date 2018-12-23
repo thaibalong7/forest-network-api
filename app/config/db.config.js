@@ -13,6 +13,7 @@ db.sequelize = sequelize;
 
 db.users = require('../model/user.js')(sequelize, Sequelize);
 db.payments = require('../model/payments.js')(sequelize, Sequelize);
-db.posts = require('../model/posts.js')(sequelize, Sequelize);
+db.followings = require('../model/followings.js')(sequelize, Sequelize);
+db.transactions = require('../model/transactions.js')(sequelize, Sequelize);
 
 module.exports = db;
