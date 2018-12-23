@@ -1,6 +1,5 @@
 const db = require('../config/db.config.js')
 var Sequelize = require("sequelize");
-const Op = Sequelize.Op;
 
 async function asyncForEach(arr, cb) {
     for (let i = 0; i < arr.length; i++) {

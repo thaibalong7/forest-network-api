@@ -15,6 +15,7 @@ app.use(express.static(__dirname + '/public')); //Serves resources from public f
 require('./app/router/users')(app);
 require('./app/router/payments')(app);
 require('./app/router/followings')(app);
+require('./app/router/transactions')(app);
 
 var server_port = process.env.YOUR_PORT || process.env.PORT || 9000;
 var server_host = process.env.YOUR_HOST || '0.0.0.0';
