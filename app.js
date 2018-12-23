@@ -12,8 +12,9 @@ app.use(function (req, res, next) {
     next();
 });
 app.use(express.static(__dirname + '/public')); //Serves resources from public folder
-app.use('/', require('./app/router/users'));
-app.use('/', require('./app/router/payments'));
+require('./app/router/users')(app);
+require('./app/router/payments')(app);
+require('./app/router/followings')(app);
 
 var server_port = process.env.YOUR_PORT || process.env.PORT || 9000;
 var server_host = process.env.YOUR_HOST || '0.0.0.0';
