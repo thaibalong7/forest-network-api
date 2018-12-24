@@ -1,6 +1,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 const db = require('./app/config/db.config');
+const { readAllBlock } = require('./ReadAllBlock')
 var app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -23,5 +24,5 @@ var server_host = process.env.YOUR_HOST || '0.0.0.0';
 var server = app.listen(server_port, server_host, function () {
     console.log(`App listening at port ${server_port}`)
 });
-
+readAllBlock();
 module.exports = server;
