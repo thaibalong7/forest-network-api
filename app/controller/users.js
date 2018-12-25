@@ -12,3 +12,13 @@ exports.login = async (req, res) => {
         return res.status(200).json({ account_info: account })
     }
 }
+
+exports.getName = async (req, res) => {
+    const account = await db.users.findByPk(req.params.id)
+    if (!account) {
+        return res.status(400).json({ msg: 'Account does not exists' })
+    }
+    else {
+        return res.status(200).json({name: account.name})
+    }
+}

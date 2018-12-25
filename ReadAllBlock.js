@@ -50,7 +50,7 @@ const queryBlock = async (height, count) => {
 const queryAllBlock = async (total_height, cb) => {
     await connectDB();
     var count = 10;
-    for (let i = 22000; i <= total_height; i += count) {
+    for (let i = 23600; i <= total_height; i += count) {
         await axios.get('https://komodo.forest.network/status').then((rs) => {
             const latest_block_height = rs.data.result.sync_info.latest_block_height;
             total_height = latest_block_height;
@@ -68,7 +68,7 @@ const queryAllBlock = async (total_height, cb) => {
 }
 
 readAllBlock = async () => {
-    await queryAllBlock(22170, async (height, count) => {
+    await queryAllBlock(23620, async (height, count) => {
         await queryBlock(height, count);
     })
     startwebsoket();
