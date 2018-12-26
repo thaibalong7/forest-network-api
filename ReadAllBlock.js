@@ -68,6 +68,7 @@ const queryAllBlock = async (total_height, cb) => {
 }
 
 readAllBlock = async () => {
+    console.log('Read All Block Start');
     await queryAllBlock(23620, async (height, count) => {
         await queryBlock(height, count);
     })
